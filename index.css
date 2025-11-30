@@ -1,0 +1,312 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.nav1{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 100px 0 100px;
+}
+.links{
+    display: flex;
+    align-items: center;
+}
+.links a{
+    text-decoration: none;
+    color: white;
+    padding-left: 70px  ;
+}
+.color{
+    color: rgb(255, 0, 60);
+}
+.profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px 0 100px;
+
+}
+.Job{
+    color: rgb(187, 187, 187);
+}
+.name{
+    font-size: 58px;
+}
+.mypic{
+    width: 800px;
+    padding-right: -1000px;
+}
+#Aboutme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    gap: 70px;
+    padding: 15px 100px 0 100px;
+}
+.ladyingrass{
+    height: 600px;
+    border-radius: 20px;
+    width: 500px;
+}
+.about{
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+}
+.abouttext{
+    color: rgb(143, 143, 143);
+    text-align: justify;
+}
+.nav2{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.nav2 a{
+    color: white;
+    text-decoration: none;
+    padding: 15px 0px;
+}
+.skill{
+    color: rgb(255, 0, 60);
+    font-size: 12px;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+.task{
+    font-size: 14px;
+    padding: 0;
+    margin: 5px 0 0 0;
+    font-weight: 400;
+    color: rgb(179, 178, 178);
+}
+#experiences{
+    display: none;
+}
+#education{
+    display: none;
+}
+.MySkills{
+    padding-top: 50px;
+    margin: 50px 0 50px 0;
+}
+.service{
+    font-size: 48px;
+    text-align: center;
+    margin:50px 0 50px 0;
+}
+.port{
+    font-size: 48px;
+    text-align: center;
+    margin:50px 0 50px 0;
+    padding-top: 100px;
+}
+.tag{
+    width: 150px;
+    margin: -20px 0 -20px -20px;
+    padding: 0;
+}
+.web{
+    background-color: rgb(30, 29, 29);
+    max-width: 420px;
+    border-radius: 8px;
+    padding: 15px 15px 30px 10px;
+}
+/* .web:hover{
+    background-color: rgb(255, 0, 60);
+    box-shadow: rgba(0, 0, 0, 0.8);
+    color: white;
+} */
+.webtext{
+    max-width: 340px;
+    font-size: 14px;
+    color: rgb(175, 174, 174);
+    padding-top: 8px;
+    text-align: justify;
+    margin-left: 10px;
+}
+.webheader{
+    font-size: 32px;
+    padding: 0;
+    margin: 0 0 0 10px;
+    color: rgb(255, 0, 60);
+}
+.learn{
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(30, 29, 29);
+    padding: 10px 30px ;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.learn:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.skillsgrid{
+    display: flex;
+    justify-content: space-evenly;
+}
+.frame{
+    width: 70px;
+    padding: 20px 0;
+    margin-left: 5px;
+}
+.Aicon{
+    width: 100px;
+    padding: 18px 0;
+    margin-left: -15px;
+}
+.site{
+    width: 300px;
+    height: 400px;
+    border-radius: 10px 10px 0 0 ;
+}
+.viewhead{
+    background-color: rgb(30, 29, 29);
+    max-width: 300px;
+    border-radius: 0 0 10px 10px;
+    margin-top: -10px;
+}
+.viewhead h3{
+    margin: 0;
+    padding: 30px 0 0 20px;
+}
+.viewSection{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+}
+.code{
+    background-color: rgb(30, 29, 29);
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px ;
+    border-radius: 8px;
+    font-size: 12px;
+    margin: 40px 0px;
+}
+.sited{
+    background-color: rgb(255, 0, 60);
+    border: 1px solid rgb(255, 0, 60);
+    color: white;
+    padding: 10px 20px ;
+    border-radius: 8px;
+    font-size: 12px;
+    margin: 40px 0px;
+}
+.code:hover, .sited:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+}
+.works{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#portfolio{
+    margin-bottom: 70px;
+}
+#Contact{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 140px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.icon{
+    width: 30px;
+}
+.mail{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.Download{
+    background-color: rgb(255, 0, 60);
+    padding: 15px 30px;
+    font-size: 14px;
+    border-radius: 3px;
+    color: white;
+    border: none;
+}
+.textfield{
+    width: 600px;
+    height: 45px;
+    background-color: rgb(43, 42, 42);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.textfield::placeholder{
+    color: rgb(113, 113, 113);
+    padding-left: 15px;
+}
+.textinput{
+    width: 600px;
+    height: 180px;
+    background-color: rgb(43, 42, 42);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.textinput::placeholder{
+    color: rgb(113, 113, 113);
+    padding-left: 15px;
+}
+.me{
+    font-size: 48px;
+}
+.othericons{
+    margin-bottom: 30px;
+}
+footer{
+    text-align: center;
+    background-color: rgb(36, 36, 36);
+    padding: 20px;
+}
+
+/* .food{
+    display: grid;
+    grid-template-columns: 2(1fr);
+    grid-template-rows: 2(1fr);
+    gap: 15px;
+}
+.languages{
+    background-color: rgb(45, 44, 44);
+    padding: 50px;
+    margin: 0 120px 50px  120px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+.logo{
+    width: 100px;
+}
+.language{
+    background-color: black;
+    max-width: 100px;
+    box-shadow: rgba(141, 139, 139, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 60px;
+    border-radius: 30px;
+} */
