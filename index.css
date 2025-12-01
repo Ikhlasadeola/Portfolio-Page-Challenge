@@ -3,14 +3,23 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+    background-color: #080800;
     color: white;
+    background-image: url(https://i.pinimg.com/736x/5a/11/bb/5a11bb1d77ee734b4f16ad3b2d6bc189.jpg);
+    position: relative;
+    z-index: 1;
 }
-
+body::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
 .nav1{
     display: flex;
     justify-content: space-between;
-    padding: 15px 100px 0 100px;
+    padding: 10px 6%;
 }
 .links{
     display: flex;
@@ -19,8 +28,29 @@ body{
 .links a{
     text-decoration: none;
     color: white;
-    padding-left: 70px  ;
+    margin-left: 70px;
+    font-size: 18px;
+    position: relative;
 }
+.links a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #ff004f, #fff);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.links a:hover::after{
+    width: 100%;
+}
+.logo{
+    width: 200px;
+}
+
+
+
 .color{
     color: rgb(255, 0, 60);
 }
@@ -28,18 +58,17 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 100px 0 100px;
+    padding: 15px 8%;
 
 }
 .Job{
     color: rgb(187, 187, 187);
 }
 .name{
-    font-size: 58px;
+    font-size: 60px;
 }
 .mypic{
-    width: 800px;
-    padding-right: -1000px;
+    border-radius: 50%;
 }
 #Aboutme{
     display: flex;
@@ -48,12 +77,11 @@ body{
     margin-top: 60px;
     padding-top: 30px;
     gap: 70px;
-    padding: 15px 100px 0 100px;
+    padding: 15px 8%;
 }
 .ladyingrass{
     height: 600px;
     border-radius: 20px;
-    width: 500px;
 }
 .about{
     font-size: 48px;
@@ -64,15 +92,30 @@ body{
     color: rgb(143, 143, 143);
     text-align: justify;
 }
-.nav2{
+
+
+.tab-title{
     display: flex;
     align-items: center;
     gap: 50px;
 }
-.nav2 a{
+.tab-links{
     color: white;
-    text-decoration: none;
-    padding: 15px 0px;
+    position: relative;
+    cursor: pointer;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #ff004f, #fff);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
 }
 .skill{
     color: rgb(255, 0, 60);
@@ -87,14 +130,14 @@ body{
     font-weight: 400;
     color: rgb(179, 178, 178);
 }
-#experiences{
+.tab-contents{
     display: none;
 }
-#education{
-    display: none;
+.tab-contents.active-tab{
+    display: block;
 }
 .MySkills{
-    padding-top: 50px;
+    padding:15px 8%;
     margin: 50px 0 50px 0;
 }
 .service{
@@ -113,60 +156,50 @@ body{
     margin: -20px 0 -20px -20px;
     padding: 0;
 }
+
 .web{
-    background-color: rgb(30, 29, 29);
-    max-width: 420px;
-    border-radius: 8px;
-    padding: 15px 15px 30px 10px;
+    background-color: #262626;
+    border-radius: 10px;
+    padding: 40px;
+    transition: background 0.5s, transform 0.5s ;
 }
-/* .web:hover{
-    background-color: rgb(255, 0, 60);
-    box-shadow: rgba(0, 0, 0, 0.8);
-    color: white;
-} */
-.webtext{
-    max-width: 340px;
-    font-size: 14px;
-    color: rgb(175, 174, 174);
-    padding-top: 8px;
-    text-align: justify;
-    margin-left: 10px;
-}
-.webheader{
-    font-size: 32px;
-    padding: 0;
-    margin: 0 0 0 10px;
-    color: rgb(255, 0, 60);
-}
-.learn{
-    border: 1px solid white;
-    color: white;
-    background-color: rgb(30, 29, 29);
-    padding: 10px 30px ;
-    border-radius: 8px;
-    font-size: 16px;
-    margin-top: 8px;
-    margin-left: 10px;
-}
-.learn:hover{
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+i{
+    font-size: 50px;
+    margin-bottom: 30px;
 }
 .skillsgrid{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 50px;
 }
-.frame{
-    width: 70px;
-    padding: 20px 0;
-    margin-left: 5px;
+.webheader{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
 }
-.Aicon{
-    width: 100px;
-    padding: 18px 0;
-    margin-left: -15px;
+.webtext{
+    color: whitesmoke;
+    font-size: 14px;
 }
+.learn{
+    font-size: 12px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color:  white;
+    border-radius: 8px;
+}
+.web:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+    color: white;
+}
+
+
+
+
 .site{
     width: 300px;
     height: 400px;
@@ -217,9 +250,14 @@ body{
     justify-content: space-evenly;
 }
 #portfolio{
-    margin-bottom: 70px;
+    margin-bottom: 200px;
+}
+.Download a{
+    text-decoration: none;
+    color: white;
 }
 #Contact{
+
     display: flex;
     justify-content: space-evenly;
     gap: 140px;
@@ -256,8 +294,6 @@ body{
     padding-left: 15px;
 }
 .textinput{
-    width: 600px;
-    height: 180px;
     background-color: rgb(43, 42, 42);
     border: none;
     border-radius: 5px;
@@ -278,35 +314,79 @@ footer{
     background-color: rgb(36, 36, 36);
     padding: 20px;
 }
+.nav1 .fa-solid{
+    display: none;
+}
 
-/* .food{
-    display: grid;
-    grid-template-columns: 2(1fr);
-    grid-template-rows: 2(1fr);
-    gap: 15px;
+@media(max-width:600px){
+    .nav1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav1 .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    .links{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        flex-direction: column;
+    }
+    .links a{
+        display: block;
+        margin : 25px;
+    }
+    .links .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .profile{
+        flex-direction: column;
+    }
+    #Aboutme{
+        flex-direction: column-reverse;
+    }
+    .skillsgrid, .works{
+        flex-direction: column;
+    }
+    .works .one{
+        margin-bottom: 40px;
+    }
+    #Contact{
+        flex-direction: column;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .textfield{
+        width: 300px;
+    }
+    textarea{
+        width: 300px;
+    }
+    .mypic{
+        width: 350px;
+    }
+    .Job{
+        font-size: 12px;
+    }
+    .name{
+        font-size: 30px;
+    }
+    .ladyingrass{
+        height: 400px;
+    }
 }
-.languages{
-    background-color: rgb(45, 44, 44);
-    padding: 50px;
-    margin: 0 120px 50px  120px;
-    border-radius: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
-}
-.logo{
-    width: 100px;
-}
-.language{
-    background-color: black;
-    max-width: 100px;
-    box-shadow: rgba(141, 139, 139, 0.8);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px;
-    padding: 30px 60px;
-    border-radius: 30px;
-} */
